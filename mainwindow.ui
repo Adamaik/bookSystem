@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1167</width>
+    <height>705</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1167</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionwsw"/>
+    <addaction name="actionwqd"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>图书管理</string>
+    </property>
+    <addaction name="actionjijji"/>
+    <addaction name="actionuhwoh"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>搜索</string>
+    </property>
+    <addaction name="actioned"/>
+    <addaction name="actiondw"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionwsw">
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="actionwqd">
+   <property name="text">
+    <string>保存文件</string>
+   </property>
+  </action>
+  <action name="actionjijji">
+   <property name="text">
+    <string>添加书籍</string>
+   </property>
+  </action>
+  <action name="actionuhwoh">
+   <property name="text">
+    <string>删除书籍</string>
+   </property>
+  </action>
+  <action name="actioned">
+   <property name="text">
+    <string>按书名搜索</string>
+   </property>
+  </action>
+  <action name="actiondw">
+   <property name="text">
+    <string>按编号搜索</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
