@@ -10,7 +10,7 @@ public:
     map<string,string>bookIds;
     map<string,book>bookNames;
     books();
-    bool addBooks(string name,string author,QDate date,string publish,int number=0);
+    bool addBooks(string name,string author,QDate date,string publish,int number=1);
     void addBook(string name,int number);
     bool removeBooks(string name);
     bool removeBook(string name,string id);

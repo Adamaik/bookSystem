@@ -1,19 +1,21 @@
 #include "books.h"
 #include<random>
 #include <iomanip>
+#include<QDebug>
+#include<QApplication>
 using std::pair;
 using std::string;
 
 const string EMPTY="0";//图书未借出
 
-books::books()
+books::books():bookIds({}),bookNames({})
 {
-
 }
 
 
 
 bool books::addBooks(string name,string author,QDate date,string publish,int number){
+    if(name=="")return false;
     if(bookNames.count(name)==1){
         return false;
     }
@@ -26,6 +28,7 @@ bool books::addBooks(string name,string author,QDate date,string publish,int num
     bookNames.insert(pair<string,book>(name,book(name,id,author,date,publish)));
     bookIds.insert(pair<string,string>(id,name));
     addBook(name,number);
+    qDebug()<<"cilcked!";
     return true;
 }
 
@@ -82,9 +85,9 @@ bool books::read(string fileName){
     file.open(fileName,std::ios::in);
     if(!file.is_open())return false;
     string stemp;
-    book btemp;
     std::getline(file,stemp);
     while(std::getline(file,stemp)){
+        book btemp;
         btemp.read(stemp);
         bookNames.insert(pair<string,book>(btemp.name,btemp));
         bookIds.insert(pair<string,string>(btemp.id,btemp.name));
